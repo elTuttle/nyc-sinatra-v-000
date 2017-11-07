@@ -1,3 +1,3 @@
-class FigureTitle < ActiveRecord::Base
+class FigureTitles < ActiveRecord::Base
 
 end
