@@ -11,4 +11,8 @@ class LandmarksController < ApplicationController
     landmark = Landmark.create(name: params[:landmark][:name], year_completed: params[:landmark][:year_completed])
   end
 
+  get '/landmarks' do
+    erb :index
+  end
+
 end
