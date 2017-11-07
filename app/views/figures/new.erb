@@ -1,6 +1,7 @@
 <form action="/figures/new" method="POST">
 
   <p>Name: <input type="text" name="figure[name]"></p>
+  <%Figure.all.each do |figure|%>
   <p>Title: <input type="text" name="figure[title_ids][]"></p>
   <p>Landmark: <input type="text" name="figure[landmark_ids][]"></p>
   <p>New Title: <input type="text" name="landmark[name]"></p>
