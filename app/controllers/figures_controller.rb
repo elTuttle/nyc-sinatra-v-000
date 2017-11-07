@@ -9,7 +9,12 @@ class FiguresController < Sinatra::Base
 
   post '/figures' do
     figure_1 = Figure.new(name: params[:figure[:name]])
-    if params[:landmark_ids] != nil 
+    if params[:landmark_ids] != nil
+      landmarks = []
+      params[:landmark_ids].each do |landmark|
+        
+      end
+    end
   end
 
 end
