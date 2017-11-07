@@ -14,6 +14,7 @@ class FiguresController < Sinatra::Base
       params[:landmark_ids].each do |landmark|
         landmarks << Landmark.find_by(name: landmark)
       end
+      figure_1.update(landmarks: landmarks)
     end
   end
 
