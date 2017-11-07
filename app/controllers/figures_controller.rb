@@ -44,4 +44,9 @@ class FiguresController < Sinatra::Base
     erb :show_figure
   end
 
+  get '/figures/:id/edit' do
+    @figure = Figure.find_by(id: params[:id])
+    erb :show_figure
+  end
+
 end
