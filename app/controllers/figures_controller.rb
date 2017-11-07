@@ -1,6 +1,6 @@
 class FiguresController < Sinatra::Base
 
-  set :views, Proc.new { File.join(root, "../views/") }
+  set :views, Proc.new { File.join(root, "../views/figures/") }
   register Sinatra::Twitter::Bootstrap::Assets
 
   get '/figures/new' do
