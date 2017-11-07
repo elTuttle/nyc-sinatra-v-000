@@ -7,4 +7,8 @@ class FiguresController < Sinatra::Base
     erb :new
   end
 
+  post '/figures' do
+    
+  end
+
 end
