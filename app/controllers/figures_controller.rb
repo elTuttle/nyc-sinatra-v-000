@@ -50,7 +50,7 @@ class FiguresController < Sinatra::Base
   end
 
   patch '/figures/:id' do
-    figure_1 = Figure.find_by(name: params[:figure][:name])
+    figure_1 = Figure.find_by(id: params[:id])
     if params[:figure][:landmark_ids] != nil
       landmarks = []
       params[:figure][:landmark_ids].each do |landmark|
