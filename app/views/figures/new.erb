@@ -1,8 +1,8 @@
 <form action="/figures/new" method="POST">
 
   <p>Name: <input type="text" name="figure[name]"></p>
-  <%Figure.all.each do |figure|%>
-    <p><input type="checkbox" name="figure[title_ids][]" value="<%=figure.name%>"></p>
+  <%Title.all.each do |title|%>
+    <p><input type="checkbox" name="figure[title_ids][]" value="<%=title.name%>"></p>
   <%end%>
   <p>Landmark: <input type="text" name="figure[landmark_ids][]"></p>
   <p>New Title: <input type="text" name="landmark[name]"></p>
