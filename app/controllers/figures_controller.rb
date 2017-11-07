@@ -3,6 +3,10 @@ class FiguresController < Sinatra::Base
   set :views, Proc.new { File.join(root, "../views/figures/") }
   register Sinatra::Twitter::Bootstrap::Assets
 
+  get '/figures' do
+    
+  end
+
   get '/figures/new' do
     erb :new
   end
@@ -33,6 +37,10 @@ class FiguresController < Sinatra::Base
       figure_1.titles << title
     end
     figure_1.save
+  end
+
+  get '/figures/:id' do
+    
   end
 
 end
