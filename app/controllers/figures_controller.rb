@@ -8,7 +8,8 @@ class FiguresController < Sinatra::Base
   end
 
   post '/figures' do
-    binding.pry
+    figure_1 = Figure.new(name: params[:figure[:name]])
+    if params[:landmark_ids] != nil 
   end
 
 end
