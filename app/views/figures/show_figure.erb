@@ -1,6 +1,6 @@
 <h1><%=@figure.name%></h1>
 <h3><%=@figure.landmarks%></h3>
 <h3><%=@figure.titles%></h3>
-<form action="/figures/<%=@figure.id%>/edit" method="post">
+<form action="/figures/<%=@figure.id%>/edit" method="get">
   <input type="submit" value="Edit Figure">
 </form>
