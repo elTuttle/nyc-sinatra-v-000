@@ -47,6 +47,7 @@ class FiguresController < Sinatra::Base
 
   patch '/figures/:id' do
     figure_1 = Figure.find_by(id: params[:id])
+    figure_1.update(name: params[:figure][:name])
     if params[:figure][:landmark_ids] != nil
       landmarks = []
       params[:figure][:landmark_ids].each do |landmark|
