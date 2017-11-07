@@ -8,7 +8,7 @@ class FiguresController < Sinatra::Base
   end
 
   post '/figures' do
-    
+
   end
 
 end
