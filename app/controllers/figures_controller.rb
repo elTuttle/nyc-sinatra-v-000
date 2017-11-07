@@ -12,14 +12,14 @@ class FiguresController < Sinatra::Base
     figure_1 = Figure.create(name: params[:figure][:name])
     if params[:figure][:landmark_ids] != nil
       landmarks = []
-      params[:landmark_ids].each do |landmark|
+      params[:figure][:landmark_ids].each do |landmark|
         landmarks << Landmark.find_by(name: landmark)
       end
       figure_1.update(landmarks: landmarks)
     end
     if params[:figure][:title_ids] != nil
       titles = []
-      params[:title_ids].each do |title|
+      params[:figure][:title_ids].each do |title|
         titles << Title.find_by(name: title)
       end
       figure_1.update(titles: titles)
