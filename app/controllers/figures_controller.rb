@@ -38,12 +38,7 @@ class FiguresController < Sinatra::Base
     end
     figure_1.save
     redirect to "/figures/#{figure_1.id}"
-  end
-
-  get '/figures/:id' do
-    @figure = Figure.find_by(id: params[:id])
-    erb :show_figure
-  end
+  end  
 
   get '/figures/:id/edit' do
     @figure = Figure.find_by(id: params[:id])
@@ -76,6 +71,11 @@ class FiguresController < Sinatra::Base
     end
     figure_1.save
     redirect to "/figures/#{figure_1.id}"
+  end
+
+  get '/figures/:id' do
+    @figure = Figure.find_by(id: params[:id])
+    erb :show_figure
   end
 
 end
