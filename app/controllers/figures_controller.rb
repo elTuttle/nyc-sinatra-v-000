@@ -4,7 +4,7 @@ class FiguresController < Sinatra::Base
   register Sinatra::Twitter::Bootstrap::Assets
 
   get '/figures' do
-    
+    erb :all_figures
   end
 
   get '/figures/new' do
@@ -40,7 +40,7 @@ class FiguresController < Sinatra::Base
   end
 
   get '/figures/:id' do
-    
+
   end
 
 end
