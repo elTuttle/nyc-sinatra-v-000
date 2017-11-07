@@ -21,9 +21,9 @@ class FiguresController < Sinatra::Base
       params[:title_ids].each do |title|
         titles << Title.find_by(name: title)
       end
-      figure_1.update(landmarks: landmarks)
+      figure_1.update(titles: titles)
     end
-    
+
   end
 
 end
