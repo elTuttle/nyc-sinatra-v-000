@@ -4,7 +4,7 @@ class LandmarksController < ApplicationController
   register Sinatra::Twitter::Bootstrap::Assets
 
   get '/landmarks/new' do
-    
+    erb :new
   end
 
 end
