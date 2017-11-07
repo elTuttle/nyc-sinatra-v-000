@@ -12,7 +12,7 @@ class FiguresController < Sinatra::Base
     if params[:landmark_ids] != nil
       landmarks = []
       params[:landmark_ids].each do |landmark|
-        
+        landmarks << Landmark.find_by(name: landmark)
       end
     end
   end
