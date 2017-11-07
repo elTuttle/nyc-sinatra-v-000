@@ -8,7 +8,7 @@ class FiguresController < Sinatra::Base
   end
 
   post '/figures' do
-    figure_1 = Figure.new(name: params[:figure[:name]])
+    figure_1 = Figure.create(name: params[:figure[:name]])
     if params[:landmark_ids] != nil
       landmarks = []
       params[:landmark_ids].each do |landmark|
@@ -23,7 +23,7 @@ class FiguresController < Sinatra::Base
       end
       figure_1.update(titles: titles)
     end
-
+    
   end
 
 end
