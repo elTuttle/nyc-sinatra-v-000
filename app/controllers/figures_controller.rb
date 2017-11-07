@@ -23,7 +23,7 @@ class FiguresController < Sinatra::Base
       end
       figure_1.update(titles: titles)
     end
-
+    binding.pry
   end
 
 end
