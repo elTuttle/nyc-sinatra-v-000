@@ -1,6 +1,7 @@
 <h1><%=@figure.name%></h1>
 <%@figure.landmarks.each do |landmark|%>
 <h3><%=@figure.landmarks%></h3>
+<%end%>
 <h3><%=@figure.titles%></h3>
 <form action="/figures/<%=@figure.id%>/edit" method="get">
   <input type="submit" value="Edit Figure">
