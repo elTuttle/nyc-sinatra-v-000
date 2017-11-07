@@ -75,6 +75,7 @@ class FiguresController < Sinatra::Base
       figure_1.titles << title
     end
     figure_1.save
+    redirect to "/figures/#{figure_1.id}"
   end
 
 end
