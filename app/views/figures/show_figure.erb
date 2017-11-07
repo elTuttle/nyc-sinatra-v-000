@@ -3,7 +3,7 @@
   <h3><%=landmark.name%></h3>
 <%end%>
 <%@figure.titles.each do |title|%>
-  <h3><%=landmark.name%></h3>
+  <h3><%=title.name%></h3>
 <%end%>
 <form action="/figures/<%=@figure.id%>/edit" method="get">
   <input type="submit" value="Edit Figure">
