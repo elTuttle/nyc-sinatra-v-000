@@ -9,6 +9,7 @@ class FiguresController < Sinatra::Base
 
   post '/figures' do
     figure_1 = Figure.create(name: params[:figure[:name]])
+    binding.pry
     if params[:landmark_ids] != nil
       landmarks = []
       params[:landmark_ids].each do |landmark|
