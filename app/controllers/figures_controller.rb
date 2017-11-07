@@ -26,11 +26,12 @@ class FiguresController < Sinatra::Base
     end
     if params[:landmark][:name] != nil
       landmark = Landmark.new(name: params[:landmark][:name])
-      figure_1.update(landmarks: landmark)
+      figure_1.landmarks << landmark
     end
     if params[:title][:name] != nil
       title = Title.new(name: params[:title][:name])
       figure_1.update(titles: title)
+      figure_1.titles << title
     end
   end
 
