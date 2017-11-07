@@ -3,10 +3,10 @@
 <form action="/figures" method="POST">
   <p>Name: <input type="text" name="figure[name]" id="figure_name"></p>
   <%Title.all.each do |title|%>
-    <p><input type="checkbox" name="figure[title_ids][]" id="title_<%=title.id%>" value="<%=title.name%>"></p>
+    <p><%=title.name%><input type="checkbox" name="figure[title_ids][]" id="title_<%=title.id%>" value="<%=title.name%>"></p>
   <%end%>
   <%Landmark.all.each do |landmark|%>
-    <p><input type="checkbox" name="figure[landmark_ids][]" id="landmark_<%=landmark.id%>" value="<%=landmark.name%>"></p>
+    <p><%=landmark.name%><input type="checkbox" name="figure[landmark_ids][]" id="landmark_<%=landmark.id%>" value="<%=landmark.name%>"></p>
   <%end%>
   <p>New Title: <input type="text" name="landmark[name]" id="new_title"></p>
   <p>New Landmark: <input type="text" name="title[name]" id="new_landmark"></p>
