@@ -4,7 +4,9 @@
   <%Title.all.each do |title|%>
     <p><input type="checkbox" name="figure[title_ids][]" value="<%=title.name%>"></p>
   <%end%>
-  <p>Landmark: <input type="text" name="figure[landmark_ids][]"></p>
+  <%Landmark.all.each do |landmark|%>
+    <p><input type="checkbox" name="figure[landmark_ids][]" value="<%=landmark.name%>"></p>
+  <%end%>
   <p>New Title: <input type="text" name="landmark[name]"></p>
   <p>New Landmark: <input type="text" name="title[name]"></p>
 
