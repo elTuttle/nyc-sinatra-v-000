@@ -16,6 +16,14 @@ class FiguresController < Sinatra::Base
       end
       figure_1.update(landmarks: landmarks)
     end
+    if params[:title_ids] != nil
+      titles = []
+      params[:title_ids].each do |title|
+        titles << Title.find_by(name: title)
+      end
+      figure_1.update(landmarks: landmarks)
+    end
+    
   end
 
 end
