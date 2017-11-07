@@ -30,9 +30,9 @@ class FiguresController < Sinatra::Base
     end
     if params[:title][:name] != nil
       title = Title.new(name: params[:title][:name])
-      figure_1.update(titles: title)
       figure_1.titles << title
     end
+    figure_1.save
   end
 
 end
